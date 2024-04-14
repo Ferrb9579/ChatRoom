@@ -45,7 +45,7 @@ class Client:
     message = self.messageEntry.get('1.0', 'end').strip()
     self.messageEntry.delete('0.0', 'end')
     if message != "":
-      data = f"{self.nickname}\n{message}"
+      data = f"{self.nickname}:\n{message}"
       self.client.send(data.encode('ascii'))
 
   def receive(self):
